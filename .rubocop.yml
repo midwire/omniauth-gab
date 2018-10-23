@@ -1,0 +1,157 @@
+require:
+  - rubocop/rspec/focused
+
+AllCops:
+  TargetRubyVersion: 2.4
+  TargetRailsVersion: 5.2
+
+  Include:
+    - '**/*.gemspec'
+    - '**/*.podspec'
+    - '**/*.jbuilder'
+    - '**/*.rake'
+    - '**/Gemfile'
+    - '**/Rakefile'
+    - '**/Capfile'
+    - '**/Guardfile'
+    - '**/Podfile'
+    - '**/Thorfile'
+    - '**/Vagrantfile'
+  Exclude:
+    - 'Capfile'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'stubs/**/*'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - 'features/step_definitions/*'
+
+# Checks formatting of special comments
+CommentAnnotation:
+  Keywords:
+    - TODO
+    - FIXME
+    - OPTIMIZE
+    - HACK
+    - REVIEW
+
+########################################
+# Style Cops
+
+Style/Documentation:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/TrivialAccessors:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/AndOr:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+
+# String#format is private now
+Style/FormatString:
+  Enabled: false
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+########################################
+# Layout Cops
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+  IndentationWidth: 4
+
+Layout/CaseIndentation:
+  Enabled: false
+
+Layout/ElseAlignment:
+  Enabled: false
+
+########################################
+# Naming Cops
+
+Naming/FileName:
+  Enabled: false
+
+########################################
+# Security Cops
+
+Security/Eval:
+  Enabled: true
+
+########################################
+# Lint Cops
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/EndAlignment:
+  Enabled: false
+
+########################################
+# Metrics Cops
+
+Metrics/LineLength:
+  Max: 110
+
+Metrics/MethodLength:
+  CountComments: false # count full line comments?
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+
+########################################
+# Bundler Cops
+
+Bundler/OrderedGems:
+  Enabled: false
+
+########################################
+# Bundler Cops
+
+RSpec/Focused:
+  Enabled: true
