@@ -26,7 +26,7 @@ Register your Gab App by logging into your account and going to [Settings > Deve
 
 ### Configuration
 
-In Rails add `config/initializers/omniauth.rb` with the following:
+In your Rails app, add `config/initializers/omniauth.rb` with the following:
 
 If you are using environment variables or [dotenv](https://github.com/bkeepers/dotenv) (recommended):
 
@@ -39,7 +39,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-Or you can hardcode your credentials:
+Or you can hardcode your credentials (not recommended):
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
@@ -51,6 +51,8 @@ end
 ```
 
 ### Routing
+
+You'll need to configure the following routes or something similar, in `routes.rb`.
 
 ```ruby
 get '/auth/:provider/callback' => 'sessions#create'

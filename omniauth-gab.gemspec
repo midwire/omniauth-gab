@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Omniauth provider for Gab Oauth2'
   spec.description   = spec.summary
-  spec.homepage      = 'https://midwiretech.com'
+  spec.homepage      = 'https://github.com/midwire/omniauth-gab'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
