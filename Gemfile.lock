@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    omniauth-gab (0.1.0)
+    omniauth-gab (0.1.1)
       omniauth
       omniauth-oauth2
 
